@@ -251,7 +251,25 @@ int CTECList<Type>::indexOf(Type searchValue)
 template<class Type>
 Type CTECList<Type>::set(int index, const Type& value)
 {
-
+    //Bounds check for size and negative
+    assert(index < size && index >= 0);
+    
+    Type holdValue;
+    ArrayNode<Type> * current = head;
+    for (int spot = 0; spot <= index; spot++)
+    {
+        if (spot != index)
+        {
+            current = current->getNext();
+        }
+        else
+        {
+            holdValue = current->getValue();
+            current->setValue(value);
+        }
+    }
+    
+    return holdValue;
 }
 
 
