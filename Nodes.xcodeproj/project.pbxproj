@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06A7090C1CA187AA00CEE51F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7090B1CA187AA00CEE51F /* main.cpp */; };
+		06A709211CA187C800CEE51F /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709131CA187C800CEE51F /* NodeController.cpp */; };
+		06A709221CA187C800CEE51F /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709151CA187C800CEE51F /* NodeRunner.cpp */; };
+		06A709231CA187C800CEE51F /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709171CA187C800CEE51F /* ArrayNode.cpp */; };
+		06A709241CA187C800CEE51F /* CTECArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709191CA187C800CEE51F /* CTECArray.cpp */; };
+		06A709251CA187C800CEE51F /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091B1CA187C800CEE51F /* CTECList.cpp */; };
+		06A709261CA187C800CEE51F /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091D1CA187C800CEE51F /* Node.cpp */; };
+		06A709271CA187C800CEE51F /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091F1CA187C800CEE51F /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		06A709081CA187AA00CEE51F /* Nodes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nodes; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A7090B1CA187AA00CEE51F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		06A709131CA187C800CEE51F /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
+		06A709141CA187C800CEE51F /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
+		06A709151CA187C800CEE51F /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeRunner.cpp; sourceTree = "<group>"; };
+		06A709171CA187C800CEE51F /* ArrayNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayNode.cpp; sourceTree = "<group>"; };
+		06A709181CA187C800CEE51F /* ArrayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayNode.h; sourceTree = "<group>"; };
+		06A709191CA187C800CEE51F /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECArray.cpp; sourceTree = "<group>"; };
+		06A7091A1CA187C800CEE51F /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECArray.h; sourceTree = "<group>"; };
+		06A7091B1CA187C800CEE51F /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		06A7091C1CA187C800CEE51F /* CTECList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECList.h; sourceTree = "<group>"; };
+		06A7091D1CA187C800CEE51F /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		06A7091E1CA187C800CEE51F /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		06A7091F1CA187C800CEE51F /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		06A709201CA187C800CEE51F /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +59,8 @@
 		06A708FF1CA187A900CEE51F = {
 			isa = PBXGroup;
 			children = (
-				06A7090A1CA187AA00CEE51F /* Nodes */,
+				06A709121CA187C800CEE51F /* NodeController */,
+				06A709161CA187C800CEE51F /* NodeModel */,
 				06A709091CA187AA00CEE51F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +73,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06A7090A1CA187AA00CEE51F /* Nodes */ = {
+		06A709121CA187C800CEE51F /* NodeController */ = {
 			isa = PBXGroup;
 			children = (
-				06A7090B1CA187AA00CEE51F /* main.cpp */,
+				06A709131CA187C800CEE51F /* NodeController.cpp */,
+				06A709141CA187C800CEE51F /* NodeController.h */,
+				06A709151CA187C800CEE51F /* NodeRunner.cpp */,
 			);
-			path = Nodes;
+			path = NodeController;
+			sourceTree = "<group>";
+		};
+		06A709161CA187C800CEE51F /* NodeModel */ = {
+			isa = PBXGroup;
+			children = (
+				06A709171CA187C800CEE51F /* ArrayNode.cpp */,
+				06A709181CA187C800CEE51F /* ArrayNode.h */,
+				06A709191CA187C800CEE51F /* CTECArray.cpp */,
+				06A7091A1CA187C800CEE51F /* CTECArray.h */,
+				06A7091B1CA187C800CEE51F /* CTECList.cpp */,
+				06A7091C1CA187C800CEE51F /* CTECList.h */,
+				06A7091D1CA187C800CEE51F /* Node.cpp */,
+				06A7091E1CA187C800CEE51F /* Node.h */,
+				06A7091F1CA187C800CEE51F /* Timer.cpp */,
+				06A709201CA187C800CEE51F /* Timer.h */,
+			);
+			path = NodeModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A7090C1CA187AA00CEE51F /* main.cpp in Sources */,
+				06A709261CA187C800CEE51F /* Node.cpp in Sources */,
+				06A709211CA187C800CEE51F /* NodeController.cpp in Sources */,
+				06A709271CA187C800CEE51F /* Timer.cpp in Sources */,
+				06A709221CA187C800CEE51F /* NodeRunner.cpp in Sources */,
+				06A709231CA187C800CEE51F /* ArrayNode.cpp in Sources */,
+				06A709251CA187C800CEE51F /* CTECList.cpp in Sources */,
+				06A709241CA187C800CEE51F /* CTECArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
