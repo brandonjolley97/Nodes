@@ -27,6 +27,30 @@ void NodeController::testLists()
 	cout << "Head should be 3 and is: " << numbers->getFront() << endl;
 }
 
+void NodeController::checkSorts()
+{
+    CTECArray<int> numbersInArray(5000);
+    CTECList<int> numbersInList;
+    int CPlusPlusArray[5000];
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        int randomValue = rand();
+        numbersInArray.set(spot, randomValue);
+        numbersInList.addToEnd(randomValue);
+        CPlusPlusArray[spot] = randomValue;
+        
+    }
+    
+    Timer sortTimer;
+    sortTimer.startTimer();
+    numbersInList.selectionSort();
+    sortTimer.stopTimer();
+    sortTimer.displayTimerInformation();
+    
+    sortTimer.resetTimer();
+    sortTimer.startTimer();
+}
+
 void NodeController :: start()
 {
 	testLists();

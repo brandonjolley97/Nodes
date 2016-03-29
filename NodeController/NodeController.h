@@ -15,6 +15,7 @@
 #include "../NodeModel/ArrayNode.cpp"
 #include "../NodeModel/CTECArray.cpp"
 #include "../NodeModel/CTECList.cpp"
+#include "../NodeModel/Timer.h"
 
 using namespace std;
 
@@ -29,6 +30,8 @@ public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
+    void checkSorts();
+    
 
 };
 

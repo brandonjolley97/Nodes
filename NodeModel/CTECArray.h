@@ -23,6 +23,8 @@ public:
 	int getSize();
 	Type get(int position);
 	void set(int position, const Type& value);
+    void swap(int indexOne, int indexTwo);
+    void selectionSort();
 };
 
 #endif /* NODEMODEL_CTECARRAY_H_ */

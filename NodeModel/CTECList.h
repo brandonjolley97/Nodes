@@ -33,6 +33,8 @@ public:
 	Type removeIndex(int index);
 	Type set(int index, const Type& value);
 	int indexOf(Type searchValue);
+    void swap(int indexOne, int indexTwo);
+    void selectionSort();
 };
 
 #endif /* NODEMODEL_CTECLIST_H_ */

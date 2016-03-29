@@ -93,7 +93,21 @@ Type CTECList<Type>::getEnd()
 template<class Type>
 Type CTECList<Type>::getFromIndex(int index)
 {
-	return index;
+    assert(this->size > 0 && index >= 0 && index < size); //compound assert statement.  If any or all of the statements don't pass, program terminates
+    
+    ArrayNode<Type> * current = head;  //Create references
+    Type returnValue;
+    
+    for(int spot = 0; spot <= index; spot++)
+    {
+        if(spot == index)
+        {
+            returnValue = current->getValue;
+        }
+        current = current->getNext();
+    }
+    return returnValue;
+    
 }
 
 template<class Type>
@@ -270,6 +284,45 @@ Type CTECList<Type>::set(int index, const Type& value)
     }
     
     return holdValue;
+}
+
+template<class Type>
+void CTECList<Type>::swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    ArrayNode<Type> * first = getFromIndex(indexOne);
+    ArrayNode<Type> * second = getFromIndex(indexTwo);
+    ArrayNode<Type> * temp = new ArrayNode<Type>();
+    
+    temp->setValue(first->getValue());
+    first->setValue(second->getValue());
+    second->setValue(temp->getValue());
+    
+    delete temp;
+}
+
+template<class Type>
+void CTECList<Type>::selectionSort()
+{
+    int innerLoop, outerLoop;
+    
+    for(outerLoop = 0; outerLoop < this->size - 1; outerLoop++)
+    {
+        int selectedMinimum = outerLoop;
+        
+        for(innerLoop = outerLoop + 1; innerLoop < size; innerLoop++)
+        {
+            if(getFromIndex(innerLoop) < getFromIndex(selectedMinimum))
+            {
+                selectedMinimum = innerLoop;
+            }
+        }
+        if(selectedMinimum != outerLoop)
+        {
+            swap(outerLoop, selectedMinimum);
+        }
+    }
+    
 }
 
 
