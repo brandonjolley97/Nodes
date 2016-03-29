@@ -102,7 +102,7 @@ Type CTECList<Type>::getFromIndex(int index)
     {
         if(spot == index)
         {
-            returnValue = current->getValue;
+            returnValue = current->getValue();
         }
         current = current->getNext();
     }
