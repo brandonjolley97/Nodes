@@ -290,15 +290,12 @@ template<class Type>
 void CTECList<Type>::swap(int indexOne, int indexTwo)
 {
     assert(indexOne < size && indexTwo < size);
-    ArrayNode<Type> * first = getFromIndex(indexOne);
-    ArrayNode<Type> * second = getFromIndex(indexTwo);
-    ArrayNode<Type> * temp = new ArrayNode<Type>();
     
-    temp->setValue(first->getValue());
-    first->setValue(second->getValue());
-    second->setValue(temp->getValue());
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexOne));
+    set(indexTwo, temp);
     
-    delete temp;
+ 
 }
 
 template<class Type>
