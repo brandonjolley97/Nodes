@@ -14,6 +14,8 @@
 		06A709251CA187C800CEE51F /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091B1CA187C800CEE51F /* CTECList.cpp */; };
 		06A709261CA187C800CEE51F /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091D1CA187C800CEE51F /* Node.cpp */; };
 		06A709271CA187C800CEE51F /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091F1CA187C800CEE51F /* Timer.cpp */; };
+		06C5B3D91CC91E9C00DE6E13 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C5B3D71CC91E9C00DE6E13 /* CTECBinaryTree.cpp */; };
+		06C5B3DC1CC921A700DE6E13 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C5B3DA1CC921A700DE6E13 /* TreeNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		06A7091E1CA187C800CEE51F /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		06A7091F1CA187C800CEE51F /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		06A709201CA187C800CEE51F /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		06C5B3D71CC91E9C00DE6E13 /* CTECBinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTree.cpp; sourceTree = "<group>"; };
+		06C5B3D81CC91E9C00DE6E13 /* CTECBinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTree.hpp; sourceTree = "<group>"; };
+		06C5B3DA1CC921A700DE6E13 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		06C5B3DB1CC921A700DE6E13 /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 				06A7091E1CA187C800CEE51F /* Node.h */,
 				06A7091F1CA187C800CEE51F /* Timer.cpp */,
 				06A709201CA187C800CEE51F /* Timer.h */,
+				06C5B3D71CC91E9C00DE6E13 /* CTECBinaryTree.cpp */,
+				06C5B3D81CC91E9C00DE6E13 /* CTECBinaryTree.hpp */,
+				06C5B3DA1CC921A700DE6E13 /* TreeNode.cpp */,
+				06C5B3DB1CC921A700DE6E13 /* TreeNode.hpp */,
 			);
 			path = NodeModel;
 			sourceTree = "<group>";
@@ -163,6 +173,8 @@
 				06A709231CA187C800CEE51F /* ArrayNode.cpp in Sources */,
 				06A709251CA187C800CEE51F /* CTECList.cpp in Sources */,
 				06A709241CA187C800CEE51F /* CTECArray.cpp in Sources */,
+				06C5B3DC1CC921A700DE6E13 /* TreeNode.cpp in Sources */,
+				06C5B3D91CC91E9C00DE6E13 /* CTECBinaryTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +293,7 @@
 				06A709111CA187AA00CEE51F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
