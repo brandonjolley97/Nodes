@@ -9,39 +9,51 @@
 #include "TreeNode.hpp"
 
 template<class Type>
-TreeNode<Type> :: TreeNode()
+TreeNode<Type> :: TreeNode() : Node<Type>()
 {
-    
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
+    this->parent = nullptr;
 }
 
 template<class Type>
-TreeNode<Type> :: TreeNode(const Type& value)
+TreeNode<Type> :: TreeNode(const Type& value) : Node<Type>(value)
 {
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
+    this->parent = nullptr;
     
+    this->setValue(value);
 }
 
 template<class Type>
 TreeNode<Type> :: TreeNode(const Type& value, TreeNode<Type> * parent)
 {
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
     
+    this->setValue(value);
+    this->setParent(parent);
+    
+
 }
 
 template<class Type>
 void TreeNode<Type> :: setLeftChild(TreeNode<Type>* leftChild)
 {
-    
+    this->leftChild = leftChild;
 }
 
 template<class Type>
 void TreeNode<Type> :: setRightChild(TreeNode<Type>* rightChild)
 {
-    
+    this->rightChild = rightChild;
 }
 
 template<class Type>
 void TreeNode<Type> :: setParent(TreeNode<Type>* parent)
 {
-    
+    this->parent = parent;
 }
 
 template<class Type>
