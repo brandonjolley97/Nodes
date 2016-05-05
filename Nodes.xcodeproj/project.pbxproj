@@ -16,6 +16,7 @@
 		06A709271CA187C800CEE51F /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A7091F1CA187C800CEE51F /* Timer.cpp */; };
 		06C5B3D91CC91E9C00DE6E13 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C5B3D71CC91E9C00DE6E13 /* CTECBinaryTree.cpp */; };
 		06C5B3DC1CC921A700DE6E13 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C5B3DA1CC921A700DE6E13 /* TreeNode.cpp */; };
+		06FCA9531CDB93A60078D9FE /* MorningHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA9511CDB93A60078D9FE /* MorningHashTable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,8 @@
 		06C5B3D81CC91E9C00DE6E13 /* CTECBinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTree.hpp; sourceTree = "<group>"; };
 		06C5B3DA1CC921A700DE6E13 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		06C5B3DB1CC921A700DE6E13 /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
+		06FCA9511CDB93A60078D9FE /* MorningHashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MorningHashTable.cpp; sourceTree = "<group>"; };
+		06FCA9521CDB93A60078D9FE /* MorningHashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MorningHashTable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				06C5B3D81CC91E9C00DE6E13 /* CTECBinaryTree.hpp */,
 				06C5B3DA1CC921A700DE6E13 /* TreeNode.cpp */,
 				06C5B3DB1CC921A700DE6E13 /* TreeNode.hpp */,
+				06FCA9511CDB93A60078D9FE /* MorningHashTable.cpp */,
+				06FCA9521CDB93A60078D9FE /* MorningHashTable.hpp */,
 			);
 			path = NodeModel;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				06A709231CA187C800CEE51F /* ArrayNode.cpp in Sources */,
 				06A709251CA187C800CEE51F /* CTECList.cpp in Sources */,
 				06A709241CA187C800CEE51F /* CTECArray.cpp in Sources */,
+				06FCA9531CDB93A60078D9FE /* MorningHashTable.cpp in Sources */,
 				06C5B3DC1CC921A700DE6E13 /* TreeNode.cpp in Sources */,
 				06C5B3D91CC91E9C00DE6E13 /* CTECBinaryTree.cpp in Sources */,
 			);

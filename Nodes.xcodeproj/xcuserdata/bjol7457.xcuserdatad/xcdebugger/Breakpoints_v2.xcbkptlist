@@ -73,7 +73,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "setLeftChild(TreeNode&lt;Type&gt;* leftChild)"
+            landmarkName = "TreeNode(const Type&amp; value, TreeNode&lt;Type&gt; * parent)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
