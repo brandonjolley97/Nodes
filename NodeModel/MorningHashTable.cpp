@@ -33,6 +33,11 @@ int MorningHashTable<Type> :: getSize()
 template<class Type>
 void MorningHashTable<Type> :: add(const Type& value)
 {
+    if(this->size/this->capacity >= this->efficiencyPercentage)
+    {
+        updateSize();
+    }
+    
     int positionToInsert = findPostion(value);
     
     if(internalStorage[positionToInsert] != nullptr)
@@ -41,7 +46,7 @@ void MorningHashTable<Type> :: add(const Type& value)
         //Insert the value there.
         while(internalStorage[positionToInsert] != nullptr)
         {
-            positionToInsert = positionToInsert +1 % size;
+            positionToInsert = (positionToInsert +1) % size;
         }
         internalStorage[positionToInsert] = value;
         
