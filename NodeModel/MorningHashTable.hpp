@@ -9,7 +9,9 @@
 #ifndef MorningHashTable_hpp
 #define MorningHashTable_hpp
 
+#include "CTECArray.cpp"
 #include <stdio.h>
+
 template<class Type>
 class MorningHashTable
 {
@@ -18,6 +20,7 @@ private:
     double efficiencyPercentage;
     int size;
     Type * internalStorage;
+    CTECArray<Type> * internalArray;
     
     int findPosition(const Type& value);
     int handleCollision(const Type& value);
