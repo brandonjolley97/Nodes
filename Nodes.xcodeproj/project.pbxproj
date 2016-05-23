@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061EE20D1CF355DF000EA7AC /* HashNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 061EE20B1CF355DF000EA7AC /* HashNode.cpp */; };
+		061EE2101CF3566C000EA7AC /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 061EE20E1CF3566C000EA7AC /* Graph.cpp */; };
 		06A709211CA187C800CEE51F /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709131CA187C800CEE51F /* NodeController.cpp */; };
 		06A709221CA187C800CEE51F /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709151CA187C800CEE51F /* NodeRunner.cpp */; };
 		06A709231CA187C800CEE51F /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A709171CA187C800CEE51F /* ArrayNode.cpp */; };
@@ -32,6 +34,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		061EE20B1CF355DF000EA7AC /* HashNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashNode.cpp; sourceTree = "<group>"; };
+		061EE20C1CF355DF000EA7AC /* HashNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashNode.hpp; sourceTree = "<group>"; };
+		061EE20E1CF3566C000EA7AC /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		061EE20F1CF3566C000EA7AC /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		06A709081CA187AA00CEE51F /* Nodes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nodes; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A709131CA187C800CEE51F /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
 		06A709141CA187C800CEE51F /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
@@ -111,6 +117,10 @@
 				06C5B3DB1CC921A700DE6E13 /* TreeNode.hpp */,
 				06FCA9511CDB93A60078D9FE /* MorningHashTable.cpp */,
 				06FCA9521CDB93A60078D9FE /* MorningHashTable.hpp */,
+				061EE20B1CF355DF000EA7AC /* HashNode.cpp */,
+				061EE20C1CF355DF000EA7AC /* HashNode.hpp */,
+				061EE20E1CF3566C000EA7AC /* Graph.cpp */,
+				061EE20F1CF3566C000EA7AC /* Graph.hpp */,
 			);
 			path = NodeModel;
 			sourceTree = "<group>";
@@ -175,12 +185,14 @@
 				06A709211CA187C800CEE51F /* NodeController.cpp in Sources */,
 				06A709271CA187C800CEE51F /* Timer.cpp in Sources */,
 				06A709221CA187C800CEE51F /* NodeRunner.cpp in Sources */,
+				061EE2101CF3566C000EA7AC /* Graph.cpp in Sources */,
 				06A709231CA187C800CEE51F /* ArrayNode.cpp in Sources */,
 				06A709251CA187C800CEE51F /* CTECList.cpp in Sources */,
 				06A709241CA187C800CEE51F /* CTECArray.cpp in Sources */,
 				06FCA9531CDB93A60078D9FE /* MorningHashTable.cpp in Sources */,
 				06C5B3DC1CC921A700DE6E13 /* TreeNode.cpp in Sources */,
 				06C5B3D91CC91E9C00DE6E13 /* CTECBinaryTree.cpp in Sources */,
+				061EE20D1CF355DF000EA7AC /* HashNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

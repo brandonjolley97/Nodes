@@ -27,6 +27,93 @@ void NodeController::testLists()
 	cout << "Head should be 3 and is: " << numbers->getFront() << endl;
 }
 
+void NodeController::testTable()
+{
+    CTECHashTable<int> tempTable;
+    HashNode<int> tempArray[10];
+    for (int spot = 0; spot < 10; spot++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
+        cout << temp.getValue() << endl;
+        tempTable.add(temp);
+        tempArray[spot] = temp;
+    }
+    for (int index = 0; index < 10; index++)
+    {
+        bool test = tempTable.contains(tempArray[index]);
+        string result;
+        if (test)
+        {
+            result = "It's there.";
+        }
+        else
+        {
+            result = "Not anywhere.";
+        }
+        cout << result << endl;
+    }
+}
+
+void NodeController::tryGraph()
+{
+    Graph<int> testerGraph;
+    testerGraph.addVertex(7);
+    testerGraph.addVertex(18);
+    testerGraph.addVertex(1);
+    testerGraph.addVertex(-11);
+    testerGraph.addVertex(10);
+    testerGraph.addVertex(50);
+    testerGraph.addVertex(110);
+    
+    testerGraph.addEdge(0, 1);
+    testerGraph.addEdge(1, 2);
+    testerGraph.addEdge(2, 3);
+    testerGraph.addEdge(3, 4);
+    testerGraph.addEdge(4, 5);
+    testerGraph.addEdge(5, 6);
+    
+    cout << "Breath First Traversal" << endl;
+    testerGraph.breathFirstTraversal(testerGraph, 0);
+    
+    cout << "Depth First Traversal" << endl;
+    testerGraph.depthFirstTraversal(testerGraph, 0);
+}
+
+void NodeController::tryTree()
+{
+    CTECBinaryTree<int> testTree;
+    testTree.insert(5);
+    testTree.insert(7);
+    testTree.insert(3);
+    testTree.insert(111);
+    testTree.insert(4563);
+    testTree.insert(0);
+    testTree.insert(-13);
+    
+    cout << "INORDER TRAVERSAL" << endl;
+    testTree.inorderTraversal(testTree.getRoot());
+    cout << " Tree" << endl;
+    
+    cout << "PREORDER TRAVERSAL" << endl;
+    testTree.preorderTraversal(testTree.getRoot());
+    cout << " Tree" << endl;
+    
+    cout << "POSTORDER TRAVERSAL" << endl;
+    testTree.postorderTraversal(testTree.getRoot());
+    cout << " Tree" << endl;
+    
+    cout << testTree.contains(5) << endl;
+    
+    testTree.remove(5);
+    
+    cout << "INORDER TRAVERSAL" << endl;
+    testTree.inorderTraversal(testTree.getRoot());
+    cout << " Tree" << endl;
+}
+
+
 void NodeController::checkSorts()
 {
     CTECArray<int> numbersInArray(5000);
@@ -76,6 +163,11 @@ void NodeController :: start()
 	}
     
     doMergesort();
+    tryTree();
+    tryGraph();
+    //testTable();
+    
+    
 }
 
 void NodeController::doMergesort()

@@ -141,7 +141,7 @@ void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
     
     if(nodeToRemove == nullptr)
     {
-        cerr << "Doh! You can't remove an empty non-existent thing" <<endl;
+        std::cerr << "Doh! You can't remove an empty non-existent thing" <<std::endl;
     }
     else if(nodeToRemove->getRightChild() == nullptr && nodeToRemove->getLeftChild() == nullptr) //Leaf node
     {
@@ -194,7 +194,7 @@ void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
     if (currentNode != nullptr)
     {
         inorderTraversal(currentNode->getLeftChild());
-        cout << currentNode->getValue() << ", " ;
+        std::cout << currentNode->getValue() << ", " ;
         inorderTraversal(currentNode->getRightChild());
     }
 }
@@ -204,7 +204,7 @@ void CTECBinaryTree<Type> :: preorderTraversal(TreeNode<Type> * currentNode)
 {
     if (currentNode != nullptr)
     {
-        cout << currentNode->getValue() << ", " ;
+        std::cout << currentNode->getValue() << ", " ;
         preorderTraversal(currentNode->getLeftChild());
         preorderTraversal(currentNode->getRightChild());
     }
@@ -217,7 +217,7 @@ void CTECBinaryTree<Type> :: postorderTraversal(TreeNode<Type> * currentNode)
     {
         postorderTraversal(currentNode->getLeftChild());
         postorderTraversal(currentNode->getRightChild());
-        cout << currentNode->getValue() << ", " ;
+        std::cout << currentNode->getValue() << ", " ;
     }
 }
 

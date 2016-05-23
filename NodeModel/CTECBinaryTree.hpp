@@ -9,16 +9,19 @@
 #ifndef CTECBinaryTree_hpp
 #define CTECBinaryTree_hpp
 
+#include <set>
 #include <stdio.h>
 #include "TreeNode.hpp"
+#include "TreeNode.cpp"
 #include "Node.h"
+#include <iostream>
 
 template <class Type>
 class CTECBinaryTree : public Node<Type>
 {
 private:
     bool balanced = false;
-    TreeNode<Type> * root;
+    TreeNode<Type> * root; 
     int height;
     int size;
     bool contains(Type value, TreeNode<Type> * currentTree); //Done.
