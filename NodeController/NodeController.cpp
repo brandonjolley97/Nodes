@@ -29,7 +29,7 @@ void NodeController::testLists()
 
 void NodeController::testTable()
 {
-    CTECHashTable<int> tempTable;
+    MorningHashTable<int> tempTable;
     HashNode<int> tempArray[10];
     for (int spot = 0; spot < 10; spot++)
     {
@@ -140,7 +140,7 @@ void NodeController::checkSorts()
 
 void NodeController :: start()
 {
-	testLists();
+	//testLists();
 
 	for(int index =0; index < notHipsterDoubles->getSize(); index++)
 	{
@@ -162,15 +162,15 @@ void NodeController :: start()
 		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index) << endl;
 	}
     
-    doMergesort();
+    //doMergeSort();
     tryTree();
-    tryGraph();
+    //tryGraph();
     //testTable();
     
     
 }
 
-void NodeController::doMergesort()
+void NodeController::doMergeSort()
 {
     mergeData = new int[500000];
     
@@ -187,7 +187,7 @@ void NodeController::doMergesort()
     
     Timer mergeTimer;
     mergeTimer.startTimer();
-    mergesort(mergeData, 500000);
+    mergeSort(mergeData, 500000);
     mergeTimer.stopTimer();
     mergeTimer.displayTimerInformation();
     
@@ -200,7 +200,7 @@ void NodeController::doMergesort()
     
 }
 
-void NodeController::mergesort(int data [], int size)
+void NodeController::mergeSort(int data [], int size)
 {
     int sizeOne;
     int sizeTwo;
@@ -210,8 +210,8 @@ void NodeController::mergesort(int data [], int size)
         sizeOne  = size/2;
         sizeTwo = size-sizeOne;
         
-        mergesort(data, sizeOne);
-        mergesort((data+sizeOne), sizeTwo);
+        mergeSort(data, sizeOne);
+        mergeSort((data+sizeOne), sizeTwo);
         
         merge(data, sizeOne, sizeTwo);
 
@@ -261,15 +261,15 @@ void NodeController::merge(int data [], int sizeOne, int sizeTwo)
     delete [] temp;
 }
 
-void NodeController::quicksort(int first, int last)
+void NodeController::quickSort(int first, int last)
 {
     int pivotIndex;
     
     if(first < last)
     {
         pivotIndex = partition(first, last);
-        quicksort(first, pivotIndex - 1);
-        quicksort(pivotIndex + 1, last);
+        quickSort(first, pivotIndex - 1);
+        quickSort(pivotIndex + 1, last);
     }
         
         

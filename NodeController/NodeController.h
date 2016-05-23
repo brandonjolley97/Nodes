@@ -29,6 +29,9 @@
 #include "../NodeModel/MorningHashTable.cpp"
 #include "../NodeModel/MorningHashTable.hpp"
 
+#include "../NodeModel/HashNode.cpp"
+#include "../NodeModel/HashNode.hpp"
+
 #include "../NodeModel/Timer.h"
 
 
@@ -41,6 +44,7 @@ class NodeController
 {
 private:
     CTECArray<int> * notHipsterInts;
+    CTECArray<double> * notHipsterDoubles;
     CTECList<int> * numbers;
     Timer arrayTimer;
     void tryGraph();

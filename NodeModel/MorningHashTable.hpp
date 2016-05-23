@@ -9,7 +9,8 @@
 #ifndef MorningHashTable_hpp
 #define MorningHashTable_hpp
 
-#include "CTECArray.cpp"
+#include "HashNode.hpp"
+#include "CTECList.h"
 #include <stdio.h>
 
 template<class Type>
@@ -17,21 +18,32 @@ class MorningHashTable
 {
 private:
     int capacity;
+    int tableCapacity;
     double efficiencyPercentage;
     int size;
-    Type * internalStorage;
-    CTECArray<Type> * internalArray;
+    int tableSize;
+    HashNode<Type>** internalStorage;
+    CTECList<HashNode<Type> > * tableStorage;
     
-    int findPosition(const Type& value);
-    int handleCollision(const Type& value);
+    void updateTableCapacity();
     void updateSize();
+    
+    int findPosition(HashNode<Type> currentNode);
+    int findTablePosition(HashNode<Type> currentNode);
+    
+    int handleCollision(HashNode<Type> currentNode);
+    
+    int getNextPrime();
+    bool isPrime(int candidateNumber);
 public:
     MorningHashTable();
-    ~MorningHashTable();
+    virtual ~MorningHashTable();
     
-    void add(const Type& value);
-    bool remove(const Type& value);
-    bool contains(const Type& value);
+    void addToTable(HashNode<Type> currentNode);
+    void add(HashNode<Type> currentNode);
+    
+    bool remove(HashNode<Type> currentNode);
+    bool contains(HashNode<Type> currentNode);
     int getSize();
 };
 
