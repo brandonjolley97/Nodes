@@ -142,25 +142,25 @@ void NodeController :: start()
 {
 	//testLists();
 
-	for(int index =0; index < notHipsterDoubles->getSize(); index++)
-	{
-		notHipsterDoubles->set(index, (2.3 * index));
-	}
-
-	for(int index = 0; index < notHipsterDoubles->getSize(); index++)
-	{
-		cout << "notHipsterDoubles at index " << index << " contains " << notHipsterDoubles->get(index) << endl;
-	}
-
-	for(int index =0; index < notHipsterInts->getSize(); index++)
-	{
-		notHipsterInts->set(index, (23 * index));
-	}
-
-	for(int index = 0; index < notHipsterInts->getSize(); index++)
-	{
-		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index) << endl;
-	}
+//	for(int index =0; index < notHipsterDoubles->getSize(); index++)
+//	{
+//		notHipsterDoubles->set(index, (2.3 * index));
+//	}
+//
+//	for(int index = 0; index < notHipsterDoubles->getSize(); index++)
+//	{
+//		cout << "notHipsterDoubles at index " << index << " contains " << notHipsterDoubles->get(index) << endl;
+//	}
+//
+//	for(int index =0; index < notHipsterInts->getSize(); index++)
+//	{
+//		notHipsterInts->set(index, (23 * index));
+//	}
+//
+//	for(int index = 0; index < notHipsterInts->getSize(); index++)
+//	{
+//		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index) << endl;
+//	}
     
     //doMergeSort();
     tryTree();
